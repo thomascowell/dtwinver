@@ -1,0 +1,1055 @@
+<html>
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<title>DtWinVer v2.37</title>
+<link href="naughter.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h2><img alt="DtWinVer Logo" height="32" src="dtwinver.gif" width="32">DtWinVer 
+v2.37</h2>
+<p>&nbsp;</p>
+<table>
+	<tr>
+		<td><a href="#Features">Features</a></td>
+	</tr>
+	<tr>
+		<td><a href="#Copyright">Copyright</a></td>
+	</tr>
+	<tr>
+		<td><a href="#History">History</a></td>
+	</tr>
+	<tr>
+		<td><a href="#API">API Reference</a></td>
+	</tr>
+	<tr>
+		<td><a href="#Notes">Notes</a></td>
+	</tr>
+	<tr>
+		<td><a href="#Contact">Contacting the Author</a></td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><a name="Features"></a>Features</h2>
+<p>DtWinVer is a C++ class which provides a comprehensive method to determine which 
+OS the program that calls it is running on. All methods it uses are fully documented 
+on various articles on the MSDN. The routine provides the emulated OS as well as 
+the underlying OS. e.g to a DOS program Windows 95 looks like MS-DOS 7.0. A full 
+list of the OS&#8217;s it can detect are:</p>
+<ul>
+	<li>DOS</li>
+	<li>Windows 3.0</li>
+	<li>Windows 3.1</li>
+	<li>Windows 3.11</li>
+	<li>Windows for Workgroups</li>
+	<li>Win32s (if you can call this an OS &lt;g&gt;)</li>
+	<li>Windows CE 1.0 </li>
+	<li>Windows CE 2.0</li>
+	<li>Windows CE 2.1</li>
+	<li>Windows CE 2.11</li>
+	<li>Windows CE 3.0</li>
+	<li>Windows CE 4.0</li>
+	<li>Windows CE .NET 4.X</li>
+	<li>Windows CE 5</li>
+	<li>Windows CE 6</li>
+	<li>Windows Embedded Compact 7</li>
+	<li>Windows 95 Gold </li>
+	<li>Windows 95 Service Pack 1</li>
+	<li>Windows 95B aka OEM Service Release 2[.1]</li>
+	<li>Windows 95C aka OEM Service Release 2.5</li>
+	<li>Windows 98</li>
+	<li>Windows 98 Service Pack 1</li>
+	<li>Windows 98 Second Edition</li>
+	<li>Windows Millennium Edition</li>
+	<li>NT 3.1</li>
+	<li>NT 3.5</li>
+	<li>NT 3.51</li>
+	<li>All flavours of NT, 2000 and XP Service packs</li>
+	<li>NT 4.0</li>
+	<li>NT Workstation, Server, PDC, BDC, Datacenter, Enterprise</li>
+	<li>Windows 2000</li>
+	<li>Windows 2000 Professional, Server, Domain Controller, Datacenter and Advanced 
+	Server</li>
+	<li>Windows Terminal Services and Back Office</li>
+	<li>Windows XP Starter Edition, XP Personal &amp; XP Professional</li>
+	<li>Windows Server 2003, Windows Server 2003 (Web Edition), Windows Server 2003 
+	Domain Controller, Datacenter, Enterprise Server &amp; 64 bit Editions</li>
+	<li>Windows Server 2003 R2, Windows Server 2003 R2 (Web Edition), Windows Server 
+	2003 R2 Domain Controller, Datacenter, Enterprise Server &amp; 64 bit Editions</li>
+	<li>Embedded Windows NT / 2000 / XP / Vista / Windows 7.</li>
+	<li>XP Media Center Edition</li>
+	<li>Windows XP Tablet PC Edition</li>
+	<li>Windows Vista (All SKU&#39;s including Starter Edition, Home Basic N, Home 
+	Basic, Home Premium, Home Premium N, Business N, Business, Enterprise N, Enterprise, 
+	Ultimate N, Ultimate).</li>
+	<li>Windows Server 2008, Windows Server 2008 Web Edition, Windows Server 2008 
+	Datacenter, Enterprise Server, Core Server, Hyper-V &amp; 64 bit Editions</li>
+	<li>Windows Essential Business Server Management, Messaging and Security Server</li>
+	<li>Windows Storage Enterprise, Express, Standard and Workgroup Server, Windows 
+	Storage Server Essentials</li>
+	<li>Windows Cluster Server</li>
+	<li>Windows Home Server, Windows Home Server Premium</li>
+	<li>Windows &quot;Security Application&quot; mode</li>
+	<li>BackOffice, Small Business Server &amp; Small Business Server Premium installed</li>
+	<li>Windows 7 (All SKU&#39;s including Starter Edition, Home Basic, Home Premium, 
+	Professional, Enterprise, Enterprise, Ultimate, 64 bit, N &amp; E editions).</li>
+	<li>Windows Server 2008 R2, Windows Server 2008 R2 Web Edition, Windows Server 
+	2008 R2 Datacenter, Enterprise Server, Core Server &amp; Hyper-V Editions.</li>
+	<li>Windows Server 2008 R2 Foundation Server</li>
+	<li>Windows Multipoint Server (Home and Premium Editions)</li>
+	<li>Windows 8 (All SKU&#39;s including Starter Edition, Pro N, Enterprise, Enterprise 
+	N, China Edition, Single Language Edition, Professional With Windows Media Center &amp; 
+	Windows RT (aka Windows on ARM))</li>
+	<li>Windows Server 2012, Windows Server 2012 Web Edition, Windows Server 2012 
+	Datacenter, Enterprise Server, Core Server &amp; Hyper-V Editions.</li>
+	<li>Windows Thin PC</li>
+	<li>Windows Automotive</li>
+	<li>Windows 8.1 (Plus all SKU&#39;s as per Windows 8).</li>
+	<li>Windows Server 2012 R2 (Plus all SKU&#39;s as per Windows Server 2012).</li>
+	<li>Windows 8.1 Update</li>
+	<li>Windows 8.1 with Bing (All SKU's including China Edition, Single Language 
+	Edition, N, Professional With Windows Media Center &amp; Windows RT (aka Windows 
+	on ARM))</li>
+	<li>Windows 2012 R2 Update</li>
+	<li>Windows 10 (All SKU&#39;s including With Bing, Starter Edition, Home, Pro, 
+	N Edition, Enterprise, China Edition, Single Language Edition, Student, Education, 
+	Connected Car, Industry Handheld, IoT Core, IoT Commercial, IoT Edge OS, IoT 
+	Enterprise, Windows RT, S 
+	Edition, Pro for Workstations &amp; &quot;Lite&quot;. 
+	Also reported is the Windows 10 UBR value. For example if the version of 
+	Windows 10 is Version 1703, OS Build 15063.138, then the &quot;138&quot; 
+	value is the UBR 
+	value. </li>
+	<li>Windows 10 RTM, Windows 10 Version 1511, Windows 10 Version 1607, 
+	Windows 10 Version 1703, Windows 10 Version 1709, Windows 10 Version 1803, Windows 10 
+	Version 1809, Windows 10 Version 1903, Windows 10 Version 1909 &amp; Windows 10 codename 
+	&quot;20H1&quot;.</li>
+	<li>Windows Server 2016 (Plus all SKU's as per Windows Server 2012 R2 as well 
+	as Windows Nano Server, Cloud Storage Server, Cloud Host Infrastructure Server, 
+	Azure Nano Server, Utility VM &amp; Workstation).</li>
+	<li>Windows Server version 1709</li>
+	<li>Windows Server version 1803</li>
+	<li>Windows Server version 1809</li>
+	<li>Windows Server version 1903</li>
+	<li>Windows Server codename &quot;19H2&quot;</li>
+	<li>Windows Server codename &quot;20H1&quot;</li>
+	<li>Windows Holographic aka Windows HoloLens</li>
+	<li>Windows 10 Mobile</li>
+	<li>Windows 10 Andromeda</li>
+	<li>Windows 10 S</li>
+	<li>Windows Server 2019 (Plus all SKU's as per Windows Server 2016).</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Some of the possible scenarios it can report on are: </p>
+<ul>
+	<li>&quot;You are running an emulated DOS v5.50 On&nbsp; Windows 2000 Server 
+	Build 2195 Service Pack 2&quot;</li>
+	<li>&quot;You are running an emulated Windows 3.95 on Windows 95 v4.0 Build 
+	950&quot;</li>
+	<li>&quot;You are running Windows for Workgroups on DOS v6.22&quot;</li>
+	<li>&quot;You are running NT Server v3.51&quot;</li>
+	<li>&quot;You are running this 32 bit process on the WOW64 layer of 64 bit Windows&quot;</li>
+	<li>&quot;You are running an application on Windows NT Terminal Server.</li>
+	<li>This NT machine is acting as a stand alone server, primary domain controller 
+	or backup domain controller.</li>
+	<li>You are running on an underlying OS of Windows 8.1 Pro build 9431 but the 
+	emulated OS is Windows 8 Pro Build 9200.</li>
+	<li>You are running on an underlying OS of Windows 10 Pro build 9841 (This is 
+	the Windows 10 Technical Preview build) but the emulated OS is Windows 8 Pro 
+	Build 9200.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><b><a name="Copyright"></a>Copyright</b></h2>
+<ul>
+	<li>You are allowed to include the source code in any product (commercial, shareware, 
+	freeware or otherwise) when your product is released in binary form.</li>
+	<li>You are allowed to modify the source code in any way you want except you 
+	cannot modify the copyright details at the top of each module.</li>
+	<li>If you want to distribute source code with your application, then you are 
+	only allowed to distribute versions released by the author. This is to maintain 
+	a single distribution point for the source code.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><a name="History"></a>History</h2>
+<p><b>v2.37 (25 September 2019)</b></p>
+<ul>
+	<li>Updated the logic in IsWindowsServerCodename19H2 to be consistent with 
+	IsWindows10Version1909. </li>
+	<li>Added a new IsWindowsServerCodename20H1 method. </li>
+	<li>Updated the logic in IsWindowsServerVersion1903 to be consistent with 
+	IsWindows10Version1903. </li>
+</ul>
+<p><b>v2.36 (15 September 2019)</b></p>
+<ul>
+	<li>Renamed IsWindows10Codename19H2 method to IsWindows10Version1909</li>
+</ul>
+<p><b>v2.35 (20 August 2019)</b></p>
+<ul>
+	<li>Fixed some further compiler warnings when using VC 2019 Preview v16.3.0 
+	Preview 2.0 </li>
+</ul>
+<p><b>v2.34 (11 August 2019)</b></p>
+<ul>
+	<li>Added support for PRODUCT_XBOX_SCARLETTHOSTOS product type. </li>
+	<li>Renamed product type value PRODUCT_XBOX_HOSTOS to 
+	PRODUCT_XBOX_DURANGOHOSTOS. </li>
+</ul>
+<p><b>v2.33 (3 July 2019)</b></p>
+<ul>
+	<li>Updated the detection logic in IsWindows10Version19H2 &amp; 
+	IsWindows10Version1903 in light of the details about 19H2 announced at
+	<a href="https://blogs.windows.com/windowsexperience/2019/07/01/announcing-windows-10-insider-preview-build-18362-10000-19h2/">
+	https://blogs.windows.com/windowsexperience/2019/07/01/announcing-windows-10-insider-preview-build-18362-10000-19h2/</a> </li>
+</ul>
+<p><b>v2.32 (21 May 2019)</b></p>
+<ul>
+	<li>Added support for the following product types: PRODUCT_XBOX_SYSTEMOS, 
+	PRODUCT_XBOX_NATIVEOS, PRODUCT_XBOX_GAMEOS, PRODUCT_XBOX_ERAOS &amp; 
+	PRODUCT_XBOX_HOSTOS </li>
+</ul>
+<p><b>20 April 2019</b></p>
+<ul>
+	<li>Fixed a small typo in the test app provided in the download.</li>
+</ul>
+<p><b>v2.31 (6 April 2019)</b></p>
+<ul>
+	<li>Updated the detection logic in IsWindows10Version1903. </li>
+	<li>Added a new IsWindows10Version19H2 method. </li>
+	<li>Renamed IsWindowsServerCodename19H1 to IsWindowsServerVersion1903 </li>
+	<li>Added a new IsWindowsServerCodename19H2 method. </li>
+</ul>
+<p><b>v2.30 (5 March 2019)</b></p>
+<ul>
+	<li>Updated the detection logic in IsWindows10Version1803, 
+	IsWindows10Version1809 and IsWindows10Version19H1 </li>
+	<li>Renamed IsWindows10Codename19H1 method to IsWindows10Version1903.</li>
+</ul>
+<p><b>v2.29 (19 February 2019)</b></p>
+<ul>
+	<li>Updated the detection logic in IsWindowsServerVersion1809. </li>
+	<li>Updated the detection login in IsWindowsServerCodename19H1.</li>
+</ul>
+<p><b>v2.28 (15 February 2019)</b></p>
+<ul>
+	<li>Fixed a number of compiler warnings when using VS 2019 Preview. </li>
+	<li>Provided a new IsWindows10Codename20H1 method.</li>
+</ul>
+<p><b>v2.27 (2 January 2019)</b></p>
+<ul>
+	<li>Updated copyright details. </li>
+	<li>Added support for PRODUCT_HOLOGRAPHIC_BUSINESS &amp; PRODUCT_IOTENTERPRISES</li>
+</ul>
+<p><b>v2.26 (29 November 2018)</b></p>
+<ul>
+	<li>Added a new IsWindowsServerCodename19H1 method.</li>
+	<li>Added support for PRODUCT_LITE.</li>
+</ul>
+<p><b>v2.25 (14 November 2018)</b></p>
+<ul>
+	<li>Added support for PRODUCT_IOTEDGEOS &amp; PRODUCT_IOTENTERPRISE</li>
+</ul>
+<p><b>v2.24 (12 October 2018)</b></p>
+<ul>
+	<li>Added a new IsWindowsServerVersion1809 method</li>
+	<li>Reimplemented the IsWindowsServerVersion1709 &amp; 
+	IsWindowsServerVersion1803 methods to explicitly check for these semi-annual 
+	Windows server editions</li>
+</ul>
+<p><b>v2.23 (23 September 2018)</b></p>
+<ul>
+	<li>Renamed PRODUCT_LEAN define to PRODUCT_CLOUDE</li>
+	<li>Removed defunct IsLean method</li>
+	<li>Fixed a number of compiler warnings when using VS 2017 15.8.5</li>
+	<li>Renamed IsWindows10Redstone5 method to IsWindows10Version1809</li>
+</ul>
+<p><b>v2.22 (26 July 2018)</b></p>
+<ul>
+	<li>Added support for PRODUCT_CLOUDEN.</li>
+	<li>Provided a new IsWindows10Codename19H1 method. </li>
+	<li>Changed IsWindows10Redstone5 to IsWindows10CodenameRedstone5.</li>
+</ul>
+<p><b>v2.21 (30 June 2018)</b></p>
+<ul>
+	<li>Fixed a number of C++ core guidelines compiler warnings. </li>
+	<li>Added support for PRODUCT_IOTOS.</li>
+</ul>
+<p><b>v2.20 (3 May 2018)</b></p>
+<ul>
+	<li>Test code now reports the UBR number on Windows Server 2019. </li>
+	<li>Fixed up detection of Server Core for the following Product types: 
+	PRODUCT_STANDARD_SERVER_SOLUTIONS_CORE, PRODUCT_DATACENTER_A_SERVER_CORE, 
+	PRODUCT_STANDARD_A_SERVER_CORE, PRODUCT_DATACENTER_WS_SERVER_CORE, 
+	PRODUCT_STANDARD_WS_SERVER_CORE, PRODUCT_DATACENTER_EVALUATION_SERVER_CORE, 
+	PRODUCT_STANDARD_EVALUATION_SERVER_CORE &amp; PRODUCT_AZURE_SERVER_CORE. </li>
+	<li>The value from GetProductInfo is now returned in the OS_VERSION_INFO 
+	structure. </li>
+	<li>Provided a new IsWindowsServerVersion1803 method.</li>
+</ul>
+<p><b>v2.19 (26 April 2018)</b></p>
+<ul>
+	<li>Added support for &quot;Windows 10 Lean&quot; as reported at
+	<a href="https://twitter.com/tfwboredom/status/987400226913779712/photo/1">
+	https://twitter.com/tfwboredom/status/987400226913779712/photo/1</a>. </li>
+</ul>
+<p><b>v2.18 (22 April 2018)</b></p>
+<ul>
+	<li>Fixed a bug in IsWindowsServer2019 when the computer is a domain 
+	controller. Thanks to Heiko Wetzel for reporting this issue. </li>
+</ul>
+<p><b>v2.17 (31 March 2018)</b></p>
+<ul>
+	<li>Renamed IsWindows10Redstone4 method to IsWindows10Version1803.</li>
+</ul>
+<p><b>v2.16 (28 March 2018)</b></p>
+<ul>
+	<li>Provided new IsWindowsServer2019, IsWebWindowsServer2019, 
+	IsStandardWindowsServer2019, IsEnterpriseWindowsServer2019, 
+	IsDatacenterWindowsServer2019 &amp; IsDomainControllerWindowsServer2019 methods</li>
+	<li>Updated IsWindows10OrWindowsServer2016 method to account for Windows 
+	Server 2019</li>
+</ul>
+<p><b>v2.15 (21 February 2018)</b></p>
+<ul>
+	<li>Added support for PRODUCT_ANDROMEDA</li>
+	<li>Provided a new IsWindows10Redstone5 method. </li>
+</ul>
+<p><b>v2.14 (4 February 2018)</b></p>
+<ul>
+	<li>Updated copyright details.</li>
+	<li>Added support for PRODUCT_ONECOREUPDATEOS.</li>
+</ul>
+<p><b>v2.13 (29 December 2017)</b></p>
+<ul>
+	<li>Download now includes a VC 2017 solution and project files. These files 
+	now support ARM64 in addition to x86, x64 and ARM.</li>
+	<li>ARM64 binaries are now included in the download</li>
+	<li>Added support for detecting PROCESSOR_ARCHITECTURE_NEUTRAL, 
+	PROCESSOR_ARCHITECTURE_ARM64, PROCESSOR_ARCHITECTURE_ARM32_ON_WIN64 &amp; 
+	PROCESSOR_ARCHITECTURE_IA32_ON_ARM64 architectures</li>
+</ul>
+<p><b>v2.12 (11 November 2017)</b></p>
+<ul>
+	<li>Added support for PRODUCT_HUBOS product type </li>
+	<li>Added support for detecting VER_SUITE_COMMUNICATIONS, 
+	VER_SUITE_SMALLBUSINESS_RESTRICTED &amp; VER_SUITE_EMBEDDED_RESTRICTED. Note 
+	that there is a new VER_SUITE_MULTIUSERTS define in the latest Windows 10 
+	SDK but it does not fit in the current WORD sized element in OSVERSIONINFOEX 
+	structure so I have not included any code to support this new define. </li>
+</ul>
+<p><b>v2.11 (21 October 2017)</b></p>
+<ul>
+	<li>Renamed IsWindows10Redstone3 method to IsWindows10Version1709. </li>
+	<li>Tested the code on Windows 10 version 1709. </li>
+	<li>Provided a new IsWindows10Redstone4 method. </li>
+	<li>Provided a new IsWindowsServerVersion1709 method. </li>
+	<li>Tested the code on Windows Server version 1709. </li>
+</ul>
+<p><b>v2.10 (28 September 2017)</b></p>
+<ul>
+	<li>Added support for PRODUCT_SERVERRDSH product type. </li>
+</ul>
+<p><b>v2.09 (27 September 2017)</b></p>
+<ul>
+	<li>Renamed IsWorkstation method to IsProWorkstations and reworked the 
+	COSVERSION_SUITE3_WORKSTATION enum to be COSVERSION_SUITE3_PRO_WORKSTATIONS. 
+	These changes allow DtWinVer to explicitly support detection of Windows 10 
+	Pro for Workstations.</li>
+</ul>
+<p><b>v2.08 (19 June 2017)</b></p>
+<ul>
+	<li>Renamed IsWindowsCloud method to IsSEdition. </li>
+	<li>Renamed IsSEdition method to IsLTSB. </li>
+</ul><p><b>v2.07 (18 April 2017)</b></p>
+<ul>
+	<li>Removed unused COSVersion::GetNTCurrentVersionFromRegistry and 
+	COSVersion::GetNTCSDVersionFromRegistry methods from codebase. </li>
+	<li>Updated the code to support the Windows 10 UBR &quot;Update Build Revision&quot; 
+	value. For example the latest version of Windows 10 at the time of this 
+	release was Version 1703, OS Build 15063.138. The 138 in the value is the 
+	UBR. </li>
+</ul>
+<p><b>v2.06 (17 April 2017)</b></p>
+<ul>
+	<li>Provided a new IsWindows10Redstone3 method.</li>
+</ul>
+<p><b>v2.05 (1 April 2017)</b></p>
+<ul>
+	<li>Renamed IsWindows10Version1704 method to IsWindows10Version1703.</li>
+	<li>Tested the code on Windows 10 version 1703.</li>
+	<li>Verified the code compiles cleanly on VC 2017.</li>
+</ul>
+<p><b>v2.04 (12 February 2017)</b></p>
+<ul>
+	<li>Added support for the following product types: PRODUCT_ENTERPRISEG, PRODUCT_ENTERPRISEGN, 
+	PRODUCT_CLOUD &amp; PRODUCT_CLOUDN.</li>
+	<li>Renamed IsWindows10Version1703 method to IsWindows10Version1704.</li>
+</ul>
+<p><b>v2.03 (3 January 2017)</b></p>
+<ul>
+	<li>Updated copyright details. </li>
+	<li>Renamed IsWindows10Redstone2 method to IsWindows10Version1703. </li>
+</ul>
+<p><b>v2.02 (13 October 2016)</b></p>
+<ul>
+	<li>Updated the code to report correct values on Windows Server 2016 RTM. It 
+	seems that on Windows Server 2016 Standard RTM that the VER_SUITE_ENTERPRISE 
+	flag is set in OSVERSIONINFOEX::wSuiteMask. I'm not sure if this is a genuine 
+	bug in Windows Server 2016 but I have modified the code to handle this by removing 
+	the COSVERSION_SUITE_ENTERPRISE flag if the code successfully calls GetProductInfo 
+	which gives the correct result after calling GetVersionEx.</li>
+</ul>
+<p><b>v2.01 (17 August 2016)</b></p>
+<ul>
+	<li>Renamed IsWindows10AnniversaryUpdate method to IsWindows10Version1607
+	</li>
+	<li>Provided new IsWindows10Redstone2, IsHolographic, IsSubscription, IsUtilityVM, 
+	IsWorkstation, IsAzure &amp; IsIoTCommercial methods.</li>
+	<li>Added support for the following product types: PRODUCT_HOLOGRAPHIC, PRODUCT_PRO_SINGLE_LANGUAGE, 
+	PRODUCT_PRO_CHINA, PRODUCT_ENTERPRISE_SUBSCRIPTION, PRODUCT_ENTERPRISE_SUBSCRIPTION_N, 
+	PRODUCT_DATACENTER_NANO_SERVER, PRODUCT_STANDARD_NANO_SERVER, PRODUCT_DATACENTER_A_SERVER_CORE, 
+	PRODUCT_STANDARD_A_SERVER_CORE, PRODUCT_DATACENTER_WS_SERVER_CORE, PRODUCT_STANDARD_WS_SERVER_CORE, 
+	PRODUCT_UTILITY_VM, PRODUCT_DATACENTER_EVALUATION_SERVER_CORE, PRODUCT_STANDARD_EVALUATION_SERVER_CORE, 
+	PRODUCT_PRO_WORKSTATION, PRODUCT_PRO_WORKSTATION_N, PRODUCT_PRO_FOR_EDUCATION, 
+	PRODUCT_PRO_FOR_EDUCATION_N, PRODUCT_AZURE_SERVER_CORE, PRODUCT_AZURE_NANO_SERVER, 
+	PRODUCT_IOTUAPCOMMERCIAL &amp; PRODUCT_MOBILE_ENTERPRISE.</li>
+	<li>Added SAL annotations to all the code.</li>
+</ul>
+<p><b>v2.0 (25 July 2016)</b></p>
+<ul>
+	<li>Reworked the code in test.cpp to correctly report on versions of Windows 
+	Server Enterprise. This follows testing on Windows Server 2016 Standard Technical 
+	Preview 5. </li>
+</ul>
+<p><b>v1.99 (4 April 2016)</b></p>
+<ul>
+	<li>Updated code to refer to Windows 10 Anniversary Update instead of Windows 
+	Redstone. </li>
+</ul>
+<p><b>v1.98 (4 March 2016)</b></p>
+<ul>
+	<li>Updated copyright details. </li>
+	<li>Provided IsWindows10RTM, IsWindows10Version1511 &amp; IsWindows10Redstone 
+	functions. Also updated the sample app to report this information. </li>
+</ul>
+<p><b>v1.97 (19 September 2015)</b></p>
+<ul>
+	<li>Code now always tries to use &quot;RTLGetVersion&quot; to get the underlying 
+	OS details. Previously it would only do this if the code detected that it was 
+	running on Windows 8.1 or greater. Also removed the GetRealVersionNumbersFromRegistry 
+	method as this returns 6.3 on Windows 10 and as such is just unreliable. Please 
+	note that DtWinVer will still report incorrect OS details if compatibility mode 
+	is enabled for your application. Thanks to Dave Silber for prompting this investigation.
+	</li>
+</ul>
+<p><b>v1.96 (17 May 2015)</b></p>
+<ul>
+	<li>Updated all code references of Windows Server 10 to Windows Server 2016.
+	</li>
+	<li>Added support for the following product types: PRODUCT_PROFESSIONAL_EMBEDDED, 
+	PRODUCT_MOBILE_CORE, PRODUCT_EMBEDDED_INDUSTRY_EVAL, PRODUCT_EMBEDDED_INDUSTRY_E_EVAL, 
+	PRODUCT_EMBEDDED_EVAL, PRODUCT_EMBEDDED_E_EVAL, PRODUCT_NANO_SERVER, PRODUCT_CLOUD_STORAGE_SERVER, 
+	PRODUCT_CORE_CONNECTED, PRODUCT_PROFESSIONAL_STUDENT, PRODUCT_CORE_CONNECTED_N, 
+	PRODUCT_PROFESSIONAL_STUDENT_N, PRODUCT_CORE_CONNECTED_SINGLELANGUAGE, PRODUCT_CORE_CONNECTED_COUNTRYSPECIFIC, 
+	PRODUCT_CONNECTED_CAR, PRODUCT_INDUSTRY_HANDHELD, PRODUCT_PPI_PRO, PRODUCT_ARM64_SERVER, 
+	PRODUCT_EDUCATION, PRODUCT_EDUCATION_N, PRODUCT_IOTUAP, PRODUCT_CLOUD_HOST_INFRASTRUCTURE_SERVER, 
+	PRODUCT_ENTERPRISE_S, PRODUCT_ENTERPRISE_S_N, PRODUCT_PROFESSIONAL_S, PRODUCT_PROFESSIONAL_S_N, 
+	PRODUCT_ENTERPRISE_S_EVALUATION &amp; PRODUCT_ENTERPRISE_S_N_EVALUATION.
+	</li>
+	<li>Remove the word Installed from most of the methods. </li>
+	<li>The download now includes a Winver14.sln solution for Visual Studio 2015 
+	RC. This now allows you to build an ARM binary of DtWinVer which you can deploy 
+	to Windows IoT Core on the Raspberry Pi 2. Also included is a precompiled ARM 
+	binary of DtWinVer.</li>
+	<li>Updated the code to clean compile on VS 2015 RC</li>
+</ul>
+<p><b>v1.95 (30 April 2015)</b></p>
+<ul>
+	<li>It turns out that the new detection code to detect Windows 8.1 with Bing 
+	was flawed in the previous release as the PRODUCT_CORE_* ProductInfo values 
+	just means the standard / core version of Windows 8.1. The code has now been 
+	updated to use a registry search to correctly detect if Windows 8.1 with Bing 
+	is installed.</li>
+</ul>
+<p><b>v1.94 (29 April 2015)</b></p>
+<ul>
+	<li>Updated the code to correctly handle / identify Windows 8.1 with Bing (aka 
+	CoreConnected). This applies to the ProductInfo values: PRODUCT_CORE_ARM, PRODUCT_CORE_N, 
+	PRODUCT_CORE_COUNTRYSPECIFIC, PRODUCT_CORE_SINGLELANGUAGE &amp; PRODUCT_CORE. 
+	Thanks to Petr Stejskal for reporting this issue. The suite value that is used 
+	to identify this is COSVERSION_SUITE2_CORECONNECTED and the method IsCoreConnected.
+	</li>
+	<li>The ProductInfo value PRODUCT_PRERELEASE_ARM now correctly sets the underlying 
+	processor type to ARM </li>
+</ul>
+<p><b>v1.93 (17 January 2015)</b></p>
+<ul>
+	<li>Updated copyright details. </li>
+	<li>Fixed up the COSVersion::IsWindows2000AdvancedServer method to correctly 
+	distinguish between server and client OSes. </li>
+	<li>Fixed up the COSVersion::IsEnterpriseWindowsServer2003 method to correctly 
+	distinguish between server and client OSes. </li>
+	<li>Fixed up the COSVersion::IsEnterpriseWindowsServer2003R2 method to correctly 
+	distinguish between server and client OSes. </li>
+	<li>Fixed up the COSVersion::IsEnterpriseWindowsServer2008 method to correctly 
+	distinguish between server and client OSes. </li>
+	<li>Fixed up the COSVersion::IsEnterpriseWindowsServer2008R2 method to correctly 
+	distinguish between server and client OSes. </li>
+	<li>Fixed up the COSVersion::IsEnterpriseWindowsServer2012 method to correctly 
+	distinguish between server and client OSes. </li>
+	<li>Fixed up the COSVersion::IsEnterpriseWindowsServer2012R2 method to correctly 
+	distinguish between server and client OSes. </li>
+	<li>Fixed up the COSVersion::IsEnterpriseWindowsServer10 method to correctly 
+	distinguish between server and client OSes. </li>
+</ul>
+<p><b>v1.92 (1 October 2014)</b></p>
+<ul>
+	<li>Updated code to support Windows 10 Technical Preview and Windows Server 
+	10 Technical Preview.</li>
+</ul>
+<p><b>v1.91 (14 April 2014)</b></p>
+<ul>
+	<li>Updated copyright details</li>
+	<li>Updated code to compile cleanly using VS 2013 </li>
+	<li>Updated code to report failure when compiled under Windows RT i.e. when 
+	the WINAPI_FAMILY preprocessor value is anything other than WINAPI_FAMILY_DESKTOP_APP
+	</li>
+	<li>Added support to detect Windows 8.1 / 2012 R2 Update </li>
+</ul>
+<p><b>v1.90 (21 July 2013)</b></p>
+<ul>
+	<li>Fixed some /analyze warnings reported by VS 2013 Preview.</li>
+	<li>The code now correctly handles the case where Windows 8.1 and Windows 2012 
+	R2 lies about the real windows version number. For details see
+	<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dn302074(v=vs.85).aspx">
+	http://msdn.microsoft.com/en-us/library/windows/desktop/dn302074(v=vs.85).aspx</a>. 
+	This change should also mean that correct OS details are returned when the code 
+	is run from a process in which AppCompat version number shims are installed. 
+	Thanks to Christian Kaiser for reporting this issue.</li>
+	<li>All RegOpenKeyEx now requests the non virtualized key via the KEY_WOW64_64KEY 
+	value.</li>
+	<li>Reworked the WriteVer application to correctly compile under Unicode.</li>
+	<li>Win32s is now surfaced as a suite value.</li>
+	<li>Major rework and refactoring of all the DtWinver code base and test app. 
+	This rework should make it easy to update the code going forward.</li>
+	<li>The suite details are now only reported after the underlying OS details 
+	in the test app.</li>
+	<li>The sample app now uses a larger stack buffer for displaying the OS details. 
+	This avoids any potential stack overwrite issues when the number of suite mask 
+	values returned is large.</li>
+	<li>Fixed a bug in the generic thunking code path in GetProductInfo which resulted 
+	in the Win32 API of the same name failing.</li>
+</ul>
+<p><b>v1.89 (7 June 2013)</b></p>
+<ul>
+	<li>Updated all code references of Windows Server codename &quot;Blue&quot; 
+	to Windows Server 2012 R2.</li>
+</ul>
+<p><b>v1.88 (26 May 2013)</b></p>
+<ul>
+	<li>Updated copyright details. </li>
+	<li>Now includes support for Windows 8.1 formerly known as Windows &quot;Blue&quot;. 
+	I have also added code to support the server version of &quot;Blue&quot; which 
+	for the moment I am calling Windows Server codename &quot;Blue&quot;.&nbsp;
+	</li>
+</ul>
+<p><b>v1.87 (30 December 2012)</b></p>
+<ul>
+	<li>Added support for the following product types: PRODUCT_EMBEDDED_AUTOMOTIVE, 
+	PRODUCT_EMBEDDED_INDUSTRY_A, PRODUCT_EMBEDDED_A, PRODUCT_EMBEDDED_INDUSTRY, 
+	PRODUCT_EMBEDDED_E, PRODUCT_EMBEDDED_INDUSTRY_E, PRODUCT_EMBEDDED_INDUSTRY_E, 
+	PRODUCT_EMBEDDED_INDUSTRY_A_E, PRODUCT_CORE_ARM, PRODUCT_CORE_ARM, PRODUCT_CORE_N, 
+	PRODUCT_CORE_COUNTRYSPECIFIC, PRODUCT_CORE_SINGLELANGUAGE, PRODUCT_CORE &amp; 
+	PRODUCT_PROFESSIONAL_WMC </li>
+	<li>Fixed a bug with the handling of the PRODUCT_THINPC #define value </li>
+	<li>Updated the code to compile cleanly on VC 2012 </li>
+</ul>
+<p><b>v1.86 (28 April 2012)</b></p>
+<ul>
+	<li>Updated copyright details. </li>
+	<li>My guess from last year was correct! Windows codename Server &quot;8&quot; 
+	will become Windows Server 2012. The code has been updated to reflect this announcement 
+	from
+	<a href="http://www.microsoft.com/en-us/news/Press/2012/Apr12/04-17MMSDay1PR.aspx">
+	http://www.microsoft.com/en-us/news/Press/2012/Apr12/04-17MMSDay1PR.aspx</a>.
+	</li>
+	<li>Updated code to refer to Windows codename &quot;8&quot; as Windows 8 based 
+	on information from
+	<a href="http://windowsteamblog.com/windows/b/bloggingwindows/archive/2012/04/16/announcing-the-windows-8-editions.aspx">
+	http://windowsteamblog.com/windows/b/bloggingwindows/archive/2012/04/16/announcing-the-windows-8-editions.aspx</a>.
+	</li>
+	<li>Removed tests for Windows 8 (Home Basic), Windows 8 (Home Premium), Windows 
+	8 (Ultimate) from code. </li>
+	<li>Added support for the following Product types: PRODUCT_PRERELEASE, PRODUCT_PRERELEASE_N, 
+	PRODUCT_PRERELEASE_ARM, PRODUCT_PROFESSIONAL_PLUS, PRODUCT_ENTERPRISE_EVALUATION, 
+	PRODUCT_STANDARD_EVALUATION_SERVER, PRODUCT_DATACENTER_EVALUATION_SERVER, PRODUCT_ENTERPRISE_N_EVALUATION, 
+	PRODUCT_STORAGE_WORKGROUP_EVALUATION_SERVER, PRODUCT_STORAGE_STANDARD_EVALUATION_SERVER, 
+	PRODUCT_MULTIPOINT_STANDARD_SERVER, PRODUCT_MULTIPOINT_PREMIUM_SERVER &amp; 
+	PRODUCT_THINPC, PRODUCT_EMBEDDEDINDUSTRY, PRODUCT_EMBEDDEDA, PRODUCT_EMBEDDEDINDUSTRYA, 
+	PRODUCT_EMBEDDEDAUTOMOTIVE, PRODUCT_EMBEDDEDE, PRODUCT_EMBEDDEDINDUSTRYAE &amp; 
+	PRODUCT_EMBEDDEDINDUSTRYE </li>
+	<li>Added support for Windows RT based on information from
+	<a href="http://windowsteamblog.com/windows/b/bloggingwindows/archive/2012/04/16/announcing-the-windows-8-editions.aspx">
+	http://windowsteamblog.com/windows/b/bloggingwindows/archive/2012/04/16/announcing-the-windows-8-editions.aspx</a>.
+	</li>
+</ul>
+<p><b>v1.85 (17 September 2011)</b></p>
+<ul>
+	<li>Updated the code to work correctly against the Windows 8 Developer Preview 
+	and Windows 8 Server Developer Preview builds. </li>
+	<li>Updated code to refer to Windows codename &quot;8&quot; and Windows codename 
+	Server &quot;8&quot; instead of Windows 8 and Windows Server 2012.</li>
+</ul>
+<p><b>v1.84 (2 July 2011)</b></p>
+<ul>
+	<li>Updated to support Windows 8 and Windows Server 2012. These are the names 
+	which DtWinVer currently uses to refer to the next client and server versions 
+	of Windows respectively. At the moment there is no official details from Microsoft 
+	on what the product names will be, but DtWinVer will be updated following any 
+	announcements.</li>
+</ul>
+<p><b>v1.83 (21 June 2011)</b></p>
+<ul>
+	<li>Updated copyright details. </li>
+	<li>Added support for the following Product types: PRODUCT_HOME_SERVER_PREMIUM, 
+	PRODUCT_SMALLBUSINESS_SERVER_PREMIUM_CORE, PRODUCT_CLUSTER_SERVER_V, PRODUCT_SMALLBUSINESS_SERVER_PREMIUM_CORE, 
+	PRODUCT_STORAGE_ENTERPRISE_SERVER_CORE, PRODUCT_SB_SOLUTION_SERVER, PRODUCT_EMBEDDED, 
+	PRODUCT_ESSENTIALBUSINESS_SERVER_MGMT, PRODUCT_SOLUTION_EMBEDDEDSERVER_CORE, 
+	PRODUCT_ESSENTIALBUSINESS_SERVER_ADDL, PRODUCT_ESSENTIALBUSINESS_SERVER_ADDLSVC, 
+	PRODUCT_STORAGE_EXPRESS_SERVER_CORE, PRODUCT_STORAGE_STANDARD_SERVER_CORE, PRODUCT_STORAGE_WORKGROUP_SERVER_CORE. 
+	Thanks to Petr Stejskal for prompting this update. </li>
+	<li>Added a IsHomeServerPremiumEditionInstalled method. </li>
+	<li>Fixed a bug handling PRODUCT_CLUSTER_SERVER_V ProductType </li>
+	<li>Fixed a bug handling PRODUCT_CLUSTER_SERVER ProductType </li>
+	<li>Fixed a typo in the name of IsSmallBusinessServerInstalled method </li>
+	<li>Added a IsWindowsCENET method. </li>
+	<li>Added a IsWindowsEmbeddedCompact method. </li>
+	<li>The sample app has been updated to differentiate between the various marketing 
+	names for CE i.e. Windows CE, Windows CE .NET and Windows Embedded Compact. 
+	The code has also been verified to operate correctly on Windows Embedded Compact 
+	using a OSDesign project on Visual Studio 2008 Professional, Windows Embedded 
+	Compact, a sub project which builds DtWinVer for x86 CEPC and a VMWare image 
+	of Compact 7 running the DtWinVer binaries. Thanks to Mike Ryan for prompting 
+	this update. </li>
+</ul>
+<p><b>v1.82 (8 August 2010)</b></p>
+<ul>
+	<li>The code now differentiates between having the Hyper-V tools installed and 
+	the actual Hyper-V OS. Thanks to Scott Pawloski for reporting this issue.&nbsp;
+	</li>
+	<li>I have removed the CE 3 &amp; 4 and Dos And Win16 binaries from the zip 
+	file. The code should still compile if you still have these ancient compilers 
+	installed.</li>
+</ul>
+<p><b>v1.81 (5 July 2010)</b></p>
+<ul>
+	<li>Added support for the following Product types: PRODUCT_ENTERPRISE_E, PRODUCT_HOME_BASIC_E, 
+	PRODUCT_HOME_PREMIUM_E, PRODUCT_PROFESSIONAL, PRODUCT_PROFESSIONAL_E, PRODUCT_PROFESSIONAL_N, 
+	PRODUCT_SERVER_FOR_SMALLBUSINESS, PRODUCT_SERVER_FOR_SMALLBUSINESS_V, PRODUCT_SERVER_FOUNDATION, 
+	PRODUCT_SOLUTION_EMBEDDEDSERVER, PRODUCT_STARTER_E, PRODUCT_STARTER_N, PRODUCT_ULTIMATE_E. 
+	This means that the code now fully supports Windows 7 Professional, Windows 
+	E Edition (The version of Windows 7 that was to be released in Europe without 
+	Internet Explorer 8), Windows Server 2008 R2 Foundation Server and Windows Multipoint 
+	Server 2010.</li>
+	<li>Changed some of the names of the class methods for overall consistency</li>
+</ul>
+<p><b>v1.80 (5 July 2010)</b></p>
+<ul>
+	<li>Updated copyright details</li>
+	<li>Added a IsWindowsVistaOrWindowsServer2008 method </li>
+	<li>Added a IsWindows7OrWindowsServer2008R2 method</li>
+	<li>Reworked the logic in all the Windows 2008 methods to use IsWindowsVistaOrWindowsServer2008 
+	instead of IsWindowsServer2008. Thanks to Matt Fox for reporting this issue.</li>
+	<li>Added comprehensive support for Windows 2008 R2</li>
+	<li>Reworked the GetInfoBySpawingWriteVer method to work correctly on OSes which 
+	use UAC. The code now uses _tempnam which places the temporary file in the &quot;TMP&quot; 
+	directory.</li>
+	<li>Fixed a bug in GetInfoBySpawingWriteVer where it incorrectly parsed the 
+	dwSuiteMask values.</li>
+	<li>Extended WriteVer and GetInfoBySpawingWriteVer to also update dwSuiteMask2</li>
+	<li>Fixed a bug in the test app where it was incorrectly calling IsEmulated64Bit 
+	instead of IsUnderlying64Bit to report whether the underlying OS was 64 bit 
+	or not.</li>
+</ul>
+<p><b>v1.79 (12 February 2009)</b></p>
+<ul>
+	<li>Updated the VC 2005 project file to use more reasonable default project 
+	settings</li>
+	<li>Updated copyright details</li>
+	<li>Includes provisional support for the Windows 7 Professional SKU. Note that 
+	the code currently assumes that the BUSINESS SKU value refers to the newly documented 
+	SKU of &quot;Windows 7 Professional&quot;. I have not found any information 
+	to confirm or deny this but this should become clearer as we approach the release 
+	of &quot;Windows 7. Any feedback on this would be much appreciated.</li>
+</ul>
+<p><b>v1.78 (15 December 2008)</b></p>
+<ul>
+	<li>Added support for detecting Windows 7</li>
+</ul>
+<p><b>v1.77 (14 June 2008)</b></p>
+<ul>
+	<li>Updated copyright details</li>
+	<li>Code now compiles cleanly using Code Analysis (/analyze)</li>
+	<li>Added support for Vista Home Premium N</li>
+	<li>Added support for Vista Business N</li>
+	<li>Added support for Vista Enterprise N</li>
+	<li>Added support for Vista Ultimate N</li>
+	<li>Added support for Windows Core Server</li>
+	<li>Added support for Windows Hyper-V</li>
+	<li>Added support for Windows Essential Business Server Management Server</li>
+	<li>Added support for Windows Essential Business Server Messaging Server</li>
+	<li>Added support for Windows Essential Business Server Security Server</li>
+	<li>Added support for Windows Storage Server Enterprise Edition</li>
+	<li>Added support for Windows Storage Server Express Edition</li>
+	<li>Added support for Windows Storage Server Standard Edition</li>
+	<li>Added support for Windows Storage Server Workgroup Edition </li>
+	<li>Added support for Windows Cluster Server Edition </li>
+	<li>Added support for Windows Business Server Premium Edition</li>
+</ul>
+<p><b>v1.76 (20 June 2007)</b></p>
+<ul>
+	<li>Include support for detecting Windows Home Server. Thanks to Petr Stejskal 
+	for suggesting this update.</li>
+</ul>
+<p><b>v1.75 (18 May 2007)</b></p>
+<ul>
+	<li>Updated copyright details.</li>
+	<li>Updated code to refer to Windows Server 2008 which was formerly known as 
+	Windows Server codename &quot;Longhorn&quot;.</li>
+</ul>
+<p><b>v1.74 (21 September 2006)</b></p>
+<ul>
+	<li>Included support for detecting all the different types of Vista SKU&#39;s, 
+	namely: Windows Vista Starter Edition, Windows Vista Home Basic N, Windows Vista 
+	Home Basic, Windows Vista Home Premium, Windows Vista Business N, Windows Vista 
+	Business, Windows Vista Enterprise, and Windows Vista Ultimate.</li>
+	<li>Fixed a bug in the displaying of unknown versions of Windows in the sample 
+	app</li>
+</ul>
+<p><b>v1.73 (17 May 2006)</b></p>
+<ul>
+	<li>Updated copyright details.</li>
+	<li>Updated documentation to use the same style as the web site.</li>
+	<li>Updated documentation on version numbers which XP Media Center can have.</li>
+	<li>Added support for Windows Server 2003, Computer Cluster Edition</li>
+	<li>Added support for Windows Storage Server 2003 R2</li>
+	<li>Added support for detecting if Windows is installed in a &quot;Security 
+	Application&quot; mode</li>
+	<li>Added support for detecting BackOffice components are installed</li>
+	<li>Provided Visual Studio 2005 solution to build DtWinver with.</li>
+</ul>
+<p><b>v1.72 (6 September 2005)</b></p>
+<ul>
+	<li>Renamed some of the functions which detect Longhorn Server. Previously the 
+	functions were incorrectly referring to Vista Server. Vista is the name of the 
+	Windows Client. As of yet, a product name has not been picked for Longhorn Server.</li>
+	<li>Now includes support for Windows Server 2003 R2.</li>
+	<li>Now includes support for Windows XP Starter Edition and any future versions 
+	such as Windows Vista Starter Edition</li>
+</ul>
+<p><b>v1.71 (22 July 2005)</b></p>
+<ul>
+	<li>Now includes support for Windows Vista, formerly Windows codename &quot;Longhorn&quot;.</li>
+</ul>
+<p><b>v1.70 (29 June 2005)</b></p>
+<ul>
+	<li>Added support for detecting if code is running on Tablet PC Edition of Windows.</li>
+	<li>Code now uses GetSystemMetrics call in preference to direct registry calls 
+	to detect Media Center Edition of Windows.</li>
+	<li>Renamed the functions which differentiate between the different OEM Service 
+	Release versions of Windows 95. They are OSR 2[.1] = Win95B, OSR2.5 = Win95C. 
+	For the gory details please see the KB article at
+	<a href="http://support.microsoft.com/kb/q158238/">http://support.microsoft.com/kb/q158238/</a>. 
+	The code now also explicitly supports Win95C.</li>
+</ul>
+<p><b>v1.69 (26 June 2005)</b></p>
+<ul>
+	<li>INTEL_PROCESSOR enum is now more correctly know as IA32 which means x86 
+	32 bit.</li>
+	<li>Fixed a bug where the OS_VERSION_INFO parameter was not be zero set in the 
+	function COSVersion::GetVersion. Thanks to &quot;Remio&quot; for reporting this 
+	issue.</li>
+</ul>
+<p><b>v1.68 (10 April 2004)</b></p>
+<ul>
+	<li>Removed a number of unreferenced variable warnings when you compile the 
+	code on VS.NET 2003. Thanks to Edward Livingston for reporting these issues.</li>
+	<li>Now includes support for Windows XP Media Center Edition. Please note that 
+	if you want to do specific version checking of what version of Media Center 
+	you have installed then you should use my CVersionInfo classes at
+	<a href="http://www.naughter.com/versioninfo.html">http://www.naughter.com/versioninfo.html</a> 
+	in conjunction with the following information which I culled from
+	<a href="http://salloway.org.uk/mediacenter/2004/version.htm">http://salloway.org.uk/mediacenter/2004/version.htm</a> 
+	which describes the various version numbers of ehshell.exe in \Windows\ehome 
+	to the corresponding versions of XP Media Center Edition.</li>
+	<li>dtwinver now returns the processor architecture via a call to GetSystemInfo 
+	or GetNativeSystemInfo. This is used to differentiate between 64 Bit Windows 
+	on Itanium and AMD64 processors.</li>
+	<li>Renamed the global preprocesor defines used by dtwinver to use more unique 
+	names</li>
+	<li>Added make files and binaries for AMD64 processors.</li>
+</ul>
+<p><b>v1.67 (8 March 2003)</b></p>
+<ul>
+	<li>Updated a comment in COSVersion::GetProductSuiteDetailsFromRegistry re NT 
+	Embedded.</li>
+	<li>A comment from John A. Vorchak: On NTe (NT Embedded) and XPE (XP Embedded), 
+	all of the versions (of DTWinver) work just fine so long as the components to 
+	support them are included in the images, which itself is kind of a crap shoot. 
+	I think that you would probably find that most images will not support the DOS 
+	or Win16 versions however most will support the Win32. Many of the images that 
+	folks build either do not include the DOS subsystem and some of them do not 
+	include Explorer, so it really can&#39;t be said that all builds will support 
+	them however it is not difficult for a developer to understand which version 
+	would work for them as they understand their target systems better than anyone 
+	and at least one version would certainly work for almost all images. As far 
+	as Win2k (Server Appliance Kit), I haven&#39;t done enough testing with that 
+	platform, nor do I currently have any built images with the SAK to say positively 
+	or otherwise. More than likely you would find no problems with the SAK images 
+	since they typically follow W2k much more than NTe or XPE do. Author: If you 
+	are writing for an embedded OS, then there is little use for DTWinver!!, since 
+	the developer has very tight control over the runtime environment. Also if you 
+	do use DTWinver on an embedded version of Windows, you will probably compile 
+	in the dtwinver code rather than ship the sample binaries I include in the dtwinver 
+	download.</li>
+</ul>
+<p><b>v1.66 (12 February 2003)</b></p>
+<ul>
+	<li>Fixed a compiler warning in GetNTServicePackFromRegistry which occurs when 
+	the code is compiled with the Watcom compiler. Thanks to Christian Kaiser for 
+	reporting this.</li>
+</ul>
+<p><b>v1.65 (8 February 2003)</b></p>
+<ul>
+	<li>Added explicit support for detecting Windows XP Service Pack 1a</li>
+	<li>Added support to determine the HAL on NT Kernels. Thanks to Christian Kaiser 
+	for suggesting this addition.</li>
+</ul>
+<p><b>v1.64 (30 January 2003)</b></p>
+<ul>
+	<li>Added explicit support for detecting NT Service Pack 6a</li>
+</ul>
+<p><b>v1.63 (10 January 2003)</b></p>
+<ul>
+	<li>Update to support MS deciding to change the name of their Whistler Server 
+	product. The product will now be called &quot;Windows Server 2003&quot;.</li>
+</ul>
+<p><b>v1.62 (11 October 2002)</b></p>
+<ul>
+	<li>Fixed a problem where on Windows XP, the test program will include the text &quot;(Standard 
+	Edition)&quot;</li>
+	<li>Added two variables to the OS_VERSION_INFO structure to report the minor 
+	service pack number</li>
+	<li>Removed the OS_VERSION_INFO structure from the global namespace</li>
+	<li>Removed all static member variables from the class</li>
+	<li>Added a member variable to the OS_VERSION_INFO to return the various &quot;suites&quot; 
+	installed</li>
+	<li>Reduced the number of calls to WriteVer to 1 when called from dos code path.</li>
+	<li>Completely reworked the internal WhichNTProduct method</li>
+	<li>General tidy up of the header file</li>
+	<li>Completely reworked the ValidateProductSuite method</li>
+	<li>Now only 1 call is made to WhichNTProduct throughout a single call to COSVersion::GetVersion</li>
+	<li>Now only 1 call is made to ValidateProductSuite throughout a single call 
+	to COSVersion::GetVersion</li>
+	<li>Fixed an unitialized variable problem in COSVersion::IsUnderlying64Bit</li>
+	<li>Changed &quot;WhichNTProduct&quot; method to &quot;GetNTOSTypeFromRegistry&quot;</li>
+	<li>Changed &quot;ValidateProductSuite&quot; method to &quot;GetProductSuiteDetailsFromRegistry&quot;.</li>
+	<li>Now correctly reports on Terminal Services being in Remote Admin Mode on 
+	OS which do not support calling GetVersionEx using an OSVERSIONINFOEX structure 
+	i.e any NT 4 install prior to SP6.</li>
+	<li>16 bit Windows code path now reports as much NT information as the Win32 
+	code path </li>
+	<li>Fixed a bug in COSVersion::GetInfoBySpawingWriteVer which was failing if 
+	it encountered an empty CSD string. This was spotted on Windows .NET Server 
+	which since it is in beta still (as of October 2002) does not have any service 
+	pack!.</li>
+</ul>
+<p><b>v1.61 (8 October 2002)</b></p>
+<ul>
+	<li>Now uses OSVERSIONINFOEX it possible in the Win32 or Win64 code paths. This 
+	provides for more reliably detection of Windows XP Home Edition.</li>
+	<li>Renamed the functions which detect Windows .NET Server 2003. Also updated 
+	the test code which prints out these names</li>
+	<li>Provided explicit support for Windows .NET Web Server</li>
+	<li>Fixed a bug in the display of the minor OS version number on Windows .NET 
+	Server.</li>
+	<li>Made the project for WriteVer a VC 5 project instead of VC 6 which it was 
+	up until now.</li>
+	<li>Reworked the internal function WhichNTProduct to use a constant input string 
+	parameter</li>
+	<li>Added explicit support for Windows NT / 2000 / XP Embedded</li>
+	<li>Added explicit support for detecting Terminal Services in remote admin mode</li>
+</ul>
+<p><b>v1.6 (30 August 2002)</b></p>
+<ul>
+	<li>Provided an update CE workspace to work correctly in eMbedded Visual C++ 
+	v3. All build configurations for eVC 3 have also been provided.</li>
+	<li>Optimized the usage of _tcscat and _tcscpy in the test app which comes with 
+	Dtwinver.cpp</li>
+	<li>OEM Info string and Platform Type string is now returned for CE code path</li>
+	<li>Fixed display of minor version number for example Windows.Net is version 
+	number v5.20 but should be shown as 5.2 to be consistent with what the native 
+	ver command displays</li>
+	<li>Provided a new CE workspace to work correctly in eMbedded Visual C++ v4. 
+	All build configurations for eVC 4 have also been provided.</li>
+</ul>
+<p><b>23 March 2002</b></p>
+<ul>
+	<li>Updated Win32 and Win64 apps to have version info in them. No changes have 
+	been made to the main dtwinver code.</li>
+</ul>
+<p><b>v1.5 (13 December 2001)</b></p>
+<ul>
+	<li>Major upgrade. Now 16 bit DOS path can return as much information as native 
+	Win32 code. This is achieved by spawning off the Win32 utility WriteVer with 
+	a special command line option. Please note that if you intend deploying dtwinver 
+	then you must now ship the writever.exe file in addition to linking in the dtwinver 
+	code into your application. Also this utility needs to be in the path or current 
+	directory when the dtwinver code is executing. Thanks to Chaz Angell for prompted 
+	me into finding a solution for this last major item missing in dtwinver.</li>
+</ul>
+<p><b>v1.42 (10 October 2001)</b></p>
+<ul>
+	<li>Added code to 32 bit code path to detect if we are being run under 64 bit 
+	Windows. Also updated the sample app to distinguish between emulated 64 bit 
+	and underlying 64 bit.</li>
+	<li>Updated the sample app to call XP Server its proper name which will be &quot;Windows.NET 
+	Server&quot;</li>
+</ul>
+<p><b>v1.41 (10 February 2001)</b></p>
+<ul>
+	<li>Updated function names etc following MS decision to call Whistler &quot;Windows 
+	XP&quot;.</li>
+</ul>
+<p><b>v1.4 (29 January 2001)</b></p>
+<ul>
+	<li>Added explicit support for XP Personal</li>
+	<li>Added explicit support for XP Professional</li>
+	<li>Added explicit support for XP Server</li>
+	<li>Added explicit support for XP Advanced Server</li>
+	<li>Added explicit support for XP Datacenter</li>
+	<li>Added explicit support for XP 64 bit (all flavours)</li>
+	<li>Made all the code into a C++ class called COSVersion</li>
+	<li>Rewrote all the generic thunk code to be easier to follow</li>
+	<li>Generic thunk code now uses CallProcEx32W</li>
+	<li>Added explicit support for BackOffice Small Business Edition</li>
+	<li>Added explicit support for Terminal Services</li>
+	<li>16 bit code path now can determine ProductSuite and ProductType type thro 
+	additional generic thunk code</li>
+	<li>Provided a 64 bit test binary and make batch file (make64.bat) for those 
+	lucky enough to have an Itanium processor and a beta of 64 bit Windows XP.</li>
+	<li>Provided a Embedded C++ workspace and X86 Release binary.</li>
+	<li>Updated copyright information</li>
+</ul>
+<p><b>v1.35 (30 June 2000)</b></p>
+<ul>
+	<li>Added explicit support for Windows Millennium Edition</li>
+</ul>
+<p><b>v1.34 (2 February 2000)</b></p>
+<ul>
+	<li>Fixed a minor copy and paste bug in the test program.</li>
+</ul>
+<p><b>v1.33 (28 July 1999)</b></p>
+<ul>
+	<li>Fixed a problem when application is build in non-huge/large memory model 
+	in Win16.</li>
+	<li>Added explicit support for returning NT and Win9x service pack information 
+	from Win32 and Win16 code paths.</li>
+	<li>Updated test program to not bother reporting on any info which does not 
+	exist. e.g. if there is no service pack installed, then we don&#39;t bother 
+	displaying any info about service packs.</li>
+	<li>Added explicit support for NT Enterprise Edition.</li>
+</ul>
+<p><b>v1.32 (26 July 1999)</b></p>
+<ul>
+	<li>Added explicit support for Windows 98 SP 1.</li>
+</ul>
+<p><b>v1.31 (23 July 1999)</b></p>
+<ul>
+	<li>Tested out support for Windows 98 SE, minor changes required</li>
+</ul>
+<p><b>v1.2 (13 September 1998)</b></p>
+<ul>
+	<li>Updated the sample app plus the DtWinVer code to explicitly support Windows 
+	98.</li>
+</ul>
+<p><b>v1.3 (22 June 1998)</b></p>
+<ul>
+	<li>UNICODE enabled the code.</li>
+	<li>Removed need for the dwOSVersionInfoSize variable.</li>
+	<li>Added support for detecting Build Number of 95 and 98 from DOS code path.</li>
+	<li>Now ships as standard with VC 5 workspace files.</li>
+	<li>Added explicit support for Windows 95 SP 1.</li>
+	<li>Added explicit support for Windows 95 OSR 2.</li>
+	<li>Added explicit support for Windows 98 Second Edition.</li>
+	<li>Added explicit support for Windows 2000.</li>
+	<li>Added explicit support for Windows CE.</li>
+	<li>Added explicit support for Windows Terminal Server&#39;s.</li>
+	<li>Added explicit support for NT Stand Alone Server&#39;s.</li>
+	<li>Added explicit support for NT Primary Domain Controller&#39;s.</li>
+	<li>Added explicit support for NT Backup Domain Controller&#39;s.</li>
+</ul>
+<p><b>v1.1 (8 May 1997)</b></p>
+<ul>
+	<li>Fix to remove Unicode and TCHAR code when being compiled for Win16.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><a name="API"></a>API</h2>
+<p>The API provided is through a C++ class namely &quot;COSVersion&quot;. It provides 
+a number of functions, the most important being &quot;GetVersion&quot; which does 
+the actual version detection. There are a number of additional functions which tell 
+you if a certain &quot;flavour&quot; of an operating system is installed. For more 
+info on how to use the function, please see the code in test.cpp.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><a name="Notes"></a>Notes</h2>
+<p>The code uses C++ but does not use ATL or MFC. Files are also included which builds 
+a simple application which reports the OS version, through a message box for a 
+GUI app and stdio for a console app.</p>
+<p>The project files included are: </p>
+<ul>
+	<li>dosver.mak (VC 1.5x for DOS)</li>
+	<li>winver.mak (VC 1.5x for Win16)</li>
+	<li>winverce3.vcw (Embedded Visual C++ 3 for Windows CE).</li>
+	<li>winverce4.vcw (Embedded Visual C++ 4 for Windows CE).</li>
+	<li>winver15.sln (Visual Studio 2017 solution for Win32, x64, ARM &amp; ARM64). 
+	Please note that this project file requires the Windows 10.0.16299.0 SDK to 
+	be installed in VS 2017, as this is the only version of the Windows SDK 
+	which includes all the required import libraries used by DtWinVer for ARM &amp; 
+	ARM64.</li>
+</ul>
+<p>Also included in the winver15 solution is a sub project to build the 
+WriteVer executable needed for the 16 bit DOS code path in DtWinVer.</p>
+<p>Areas where the code may prove useful are: </p>
+<ul>
+	<li>A DOS program wants to know if it can be allowed access to hardware ports 
+	which is not available on NT, but is available on DOS, Windows 3.x &amp; Windows 
+	95.</li>
+	<li>A Win32 program wants to know if the Windows 95 UI is available.</li>
+	<li>A Win16 program wants to know if it can call the Win32 API via generic thunking.</li>
+	<li>Checking for the existence of a certain service pack on Windows 95, 98, 
+	2000 or XP.</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><a name="Contact"></a>Contacting the Author</h2>
+<p>PJ Naughter<br>Email: <a href="mailto:pjna@naughter.com">pjna@naughter.com</a><br>
+Web: <a href="http://www.naughter.com">http://www.naughter.com</a><br>25 
+September 2019</p>
+
+</body>
+
+</html>
